@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RPS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style/my-rock-paper-scissors.css">
+    </head>
+    <body>
+        <div class="body-container">
+            <div class="screen-container">
+                <div class="screen-top"> 
+                    <p class="title">
+                        Rock Paper Scissors
+                    </p>
+                </div>
+                <div class="screen-middle">
+                    <button class="move-button" onclick="playGame('rock');">
+                        <img src="images/rock-emoji.png" class="move-icon">
+                    </button>
+                    <button class="move-button" onclick="playGame('paper');">
+                        <img src="images/paper-emoji.png" class="move-icon">
+                    </button>
+                    <button class="move-button" onclick="playGame('scissors');">
+                        <img src="images/scissors-emoji.png" class="move-icon">
+                    </button>
+                </div>
+                <div class="screen-bottom">
+                    <div class="result-moves">
+                        <div class="result">
+                            <p class="js-result"></p>
+                        </div>
+                        <div class="moves">
+                            <p class="js-moves"></p>
+                        </div>
+                    </div>
+                    <div class="score-reset">
+                        <div class="score">Score</div>
+                        <div class="reset">
+                            <button class="reset-button" onclick="resetScore();">Reset Score</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="scripts/my-rock-paper-scissors.js"></script>
+    </body>  
+</html>

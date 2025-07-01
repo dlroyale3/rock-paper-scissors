@@ -1,0 +1,249 @@
+body {
+    /* background-color: lightblue; */
+    margin: 0;
+    /* margin-bottom: 1000px; */
+    font-family: 'Roboto', Arial;
+    color: white;
+    /* background: url(images/bck_img.jpg) no-repeat; */
+}
+
+p {
+    margin: 0;
+}
+
+.body-container {
+    /* background-color: lightblue; */
+    background-image: url('../images/bck_img.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.screen-container {
+    /* background-color: lightpink; */
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 90%;
+}
+
+.screen-top,
+.screen-bottom {
+    width: 100%;
+    display: flex;
+}
+
+.screen-middle {
+    width: 100%;
+    display: flex;
+}
+
+.screen-top {
+    flex: 1;
+    /* background-color: red; */
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+
+    /* border-bottom: 2px solid rgba(255, 255, 255, .2); */
+}
+
+.title {
+    font-size: 5vw;
+    min-font-size: 40px;
+    max-font-size: 70px;
+    margin: 0;
+}
+
+.screen-middle {
+    flex: 2;
+    /* background-color: yellow; */
+    background: transparent;
+    /* justify-content: space-evenly; */
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    /* gap: clamp(2px, 4vw, 70px); */
+}
+
+@media (min-width: 550px) {
+    .screen-middle {
+        gap: 15px;
+    }
+}
+
+@media (min-width: 700px) {
+    .screen-middle {
+        gap: 45px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .screen-middle {
+        gap: 70px;
+    }
+}
+
+.screen-bottom {
+    flex: 2.5;
+    /* background-color: blue; */
+    background: transparent;
+}
+
+.move-button {
+    /* margin-left: 70px;
+    margin-right: 70px; */
+    /* height: 50px; */
+    width: 17%;
+    min-width: 125px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: transparent;
+    flex-shrink: 1;
+    cursor: pointer;
+    border: 3px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    transition: background-color 0.2s;
+}
+
+.move-button:hover {
+    background-color: white;
+}
+
+/* Adaugă aceste stări pentru mobile */
+/* .move-button:active {
+    background-color: rgba(255, 255, 255, 0.3);
+} */
+
+.move-button:focus {
+    background-color: transparent; /* Revine la transparent */
+    outline: none; /* Elimină outline-ul default */
+}
+
+/* Pentru a elimina starea focus după tap pe mobile */
+.move-button {
+    -webkit-tap-highlight-color: transparent; /* Elimină highlight-ul pe iOS */
+    touch-action: manipulation; /* Optimizează pentru touch */
+}
+
+@media (max-width: 480px) {
+    .move-button {
+        width: 32%;
+        min-width: 50px;
+    }
+}
+
+.move-icon {
+    height: 75%;
+    width: 75%;
+    object-fit: contain;
+    /* padding: 3px; */
+}
+
+.screen-bottom {
+    flex-direction: column;
+    align-items: center;
+}
+
+.result-moves,
+.score-reset {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.result-moves {
+    flex: 1;
+    /* background-color: green; */
+    background: transparent;
+    flex-direction: column;
+    align-items: center;
+}
+
+.result,
+.moves {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.result {
+    /* background-color: blueviolet; */
+    background: transparent;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.moves {
+    /* background-color: brown; */
+    background: transparent;
+    font-size: x-large;
+    text-align: center;
+}
+
+.score-reset {
+    flex: 1;
+    /* background-color: aqua; */
+    background: transparent;
+    flex-direction: column;
+    align-items: center;
+}
+
+.score,
+.reset {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    /* box-sizing: border-box; */
+}
+
+.score {
+    /* background-color: chartreuse; */
+    background: transparent;
+    font-size:x-large;
+}
+
+.reset {
+    /* background-color: darkorange; */
+    background: transparent;
+}
+
+.reset-button {
+    width: 60%;
+    height: 60%;
+    /* font-size: clamp(12px, 7vw, 24px); */
+    font-size: x-large;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white;
+
+    color: #333;
+    
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    transition: background 0.2s;
+}
+
+.reset-button:hover {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, .2);
+}
